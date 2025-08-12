@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+.venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data
+data/pm25_raw_90d.csv
+data/pm25_90d.csv
+
+# OS
+.DS_Store
+Thumbs.db

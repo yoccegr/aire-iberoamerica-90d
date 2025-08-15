@@ -1,64 +1,44 @@
-# Calidad del aire en Iberoamérica (últimos 90 días)
 
-Comparación de **PM2.5** en cinco capitales iberoamericanas: **Santiago (CL), Ciudad de México (MX), Bogotá (CO), Madrid (ES) y Brasília (BR)**.
-Período: últimos 90 días desde la fecha de descarga.
+# Análisis de Calidad del Aire - PM2.5
 
-**Fuente:** [OpenAQ](https://openaq.org) — datos abiertos.  
-**Fecha de creación del proyecto:** 2025-08-12
+Este proyecto analiza los niveles de **PM2.5** en distintas ciudades, comparándolos con el límite recomendado por la **Organización Mundial de la Salud (OMS)**.
 
-## Estructura
-```
-aire-iberoamerica-90d/
-├─ data/
-│  ├─ pm25_raw_90d.csv    # crudo desde API OpenAQ
-│  └─ pm25_90d.csv        # limpio y agregado diario por ciudad
-├─ notebooks/
-│  └─ 01_visualizacion_pm25.ipynb
-├─ src/
-│  └─ fetch_openaq_pm25.py
-├─ .gitignore
-├─ requirements.txt
-└─ README.md
-```
+## 📊 Visualizaciones
 
-## Reproducir
-1. Crear entorno e instalar dependencias:
-   - Windows (PowerShell)
-     ```powershell
-     cd aire-iberoamerica-90d
-     python -m venv .venv
-     .venv\Scripts\Activate.ps1
-     pip install -r requirements.txt
-     ```
-   - macOS/Linux
-     ```bash
-     cd aire-iberoamerica-90d
-     python3 -m venv .venv
-     source .venv/bin/activate
-     pip install -r requirements.txt
-     ```
+### 1️⃣ Evolución diaria de PM2.5 por ciudad
+Muestra la tendencia diaria de las concentraciones de PM2.5 en cada ciudad durante el período de estudio.
 
-2. Descargar y preparar datos (API OpenAQ v2 — últimos 90 días):
-   ```bash
-   python src/fetch_openaq_pm25.py
-   ```
+![Evolución diaria PM2.5](images/lineas_pm25.png)
 
-3. Abrir el notebook y generar visualizaciones:
-   - En VS Code: abre la carpeta y ejecuta `notebooks/01_visualizacion_pm25.ipynb`.
-   - O con Jupyter:
-     ```bash
-     pip install jupyter
-     jupyter notebook notebooks/01_visualizacion_pm25.ipynb
-     ```
+### 2️⃣ Comparación directa entre ciudades
+Gráfico de líneas que permite comparar en la misma escala los valores de PM2.5 entre las ciudades seleccionadas.
 
-## Visualizaciones
-- **Mapa interactivo** (`scatter_geo`): tamaño y color = promedio PM2.5 por ciudad (últimos 90 días).
-- **Serie temporal** (`line`): evolución diaria, con línea guía **OMS 24h ≈ 15 µg/m³**.
+![Comparación directa](images/comparacion_ciudades.png)
 
-## Notas y buenas prácticas
-- Si alguna ciudad viene sin datos, el script prueba variantes de nombre (p. ej., *Mexico City / Ciudad de México*).
-- Los promedios diarios se calculan en **UTC** (consistencia temporal).
-- Recomendado: describir **2–3 hallazgos** en el README (picos estacionales, ciudad con menor promedio, variación semanal).
+### 3️⃣ Porcentaje de días sobre el límite OMS
+Gráfico de barras que indica el porcentaje de días en que cada ciudad superó el límite recomendado por la OMS.
 
-## Licencia
-Uso libre citando la fuente (OpenAQ).
+![Porcentaje sobre OMS](images/barras_pct_sobre_oms.png)
+
+## 📄 Metodología
+
+1. **Carga de datos**: Se procesan los registros de PM2.5 por fecha y ciudad.
+2. **Cálculo de días sobre OMS**: Se marca cada día en que el valor excede el límite de 15 μg/m³.
+3. **Visualización**: Se generan gráficos comparativos y de resumen.
+4. **Interpretación**: Se observan patrones y se identifican las ciudades más críticas.
+
+## 🛠️ Tecnologías utilizadas
+
+- **Python** (pandas, plotly)
+- **Jupyter Notebook**
+- **Git/GitHub** para control de versiones
+
+## 📌 Resultados clave
+
+- Santiago presenta la mayor variabilidad y los niveles más altos de PM2.5.
+- Ciudad de México y Madrid mantienen niveles moderados pero con picos significativos.
+- Río de Janeiro muestra niveles bajos durante el período analizado.
+
+---
+📬 *Autor*: Yocce González  
+📅 *Última actualización*: Agosto 2025

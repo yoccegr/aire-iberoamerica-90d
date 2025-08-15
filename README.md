@@ -15,8 +15,8 @@ El propósito de este proyecto es:
 
 ## 🗺️ Ciudades incluidas
 El muestreo incluye ciudades de **Iberoamérica**, abarcando países como:
-- **América Latina**: México, Colombia, Chile, Argentina, Perú, Brasil, entre otros.
-- **Península Ibérica**: España y Portugal.
+- **América Latina**: México, Chile y Brasil.
+- **Península Ibérica**: España.
 
 ## 📊 Visualizaciones
 
@@ -31,7 +31,7 @@ El muestreo incluye ciudades de **Iberoamérica**, abarcando países como:
 ---
 
 ### 3️⃣ Mapa interactivo
-[![Abrir mapa interactivo](images/barras_pct_sobre_oms.png)](https://yoccegr.github.io/aire-iberoamerica-90d/mapa_pm25_interactivo.html)  
+(https://yoccegr.github.io/aire-iberoamerica-90d/mapa_pm25_interactivo.html)  
 > **Clic en la imagen** o en el enlace para explorar los datos.  
 > 🔗 [Ver mapa interactivo en GitHub Pages](https://yoccegr.github.io/aire-iberoamerica-90d/mapa_pm25_interactivo.html)
 
@@ -45,5 +45,5 @@ El muestreo incluye ciudades de **Iberoamérica**, abarcando países como:
 
 ---
 
-📅 **Última actualización:** Febrero 2025  
+📅 **Última actualización:** Agosto 2025  
 ✍️ **Autor:** [Yocce González](https://github.com/yoccegr)

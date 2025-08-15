@@ -1,44 +1,45 @@
+# Análisis de Calidad del Aire en Iberoamérica
 
-# Análisis de Calidad del Aire - PM2.5
+Este proyecto analiza datos de calidad del aire, enfocado en los niveles de **PM2.5** en distintas ciudades de Iberoamérica.
 
-Este proyecto analiza los niveles de **PM2.5** en distintas ciudades, comparándolos con el límite recomendado por la **Organización Mundial de la Salud (OMS)**.
+## Contenido
 
-## 📊 Visualizaciones
-
-### 1️⃣ Evolución diaria de PM2.5 por ciudad
-Muestra la tendencia diaria de las concentraciones de PM2.5 en cada ciudad durante el período de estudio.
-
-![Evolución diaria PM2.5](images/lineas_pm25.png)
-
-### 2️⃣ Comparación directa entre ciudades
-Gráfico de líneas que permite comparar en la misma escala los valores de PM2.5 entre las ciudades seleccionadas.
-
-![Comparación directa](images/comparacion_ciudades.png)
-
-### 3️⃣ Porcentaje de días sobre el límite OMS
-Gráfico de barras que indica el porcentaje de días en que cada ciudad superó el límite recomendado por la OMS.
-
-![Porcentaje sobre OMS](images/barras_pct_sobre_oms.png)
-
-## 📄 Metodología
-
-1. **Carga de datos**: Se procesan los registros de PM2.5 por fecha y ciudad.
-2. **Cálculo de días sobre OMS**: Se marca cada día en que el valor excede el límite de 15 μg/m³.
-3. **Visualización**: Se generan gráficos comparativos y de resumen.
-4. **Interpretación**: Se observan patrones y se identifican las ciudades más críticas.
-
-## 🛠️ Tecnologías utilizadas
-
-- **Python** (pandas, plotly)
-- **Jupyter Notebook**
-- **Git/GitHub** para control de versiones
-
-## 📌 Resultados clave
-
-- Santiago presenta la mayor variabilidad y los niveles más altos de PM2.5.
-- Ciudad de México y Madrid mantienen niveles moderados pero con picos significativos.
-- Río de Janeiro muestra niveles bajos durante el período analizado.
+- **Mapas interactivos**: Visualización geográfica de la concentración de PM2.5.
+- **Gráficos comparativos**: Relación con los límites de la OMS y tendencias temporales.
+- **Código reproducible**: Scripts en Python para procesar y visualizar los datos.
 
 ---
-📬 *Autor*: Yocce González  
-📅 *Última actualización*: Agosto 2025
+
+## Mapa Interactivo
+
+Haz clic para ver el mapa interactivo de PM2.5 publicado en GitHub Pages:
+
+🔗 [Ver mapa interactivo](https://yoccegr.github.io/aire-iberoamerica-90d/mapa_pm25_interactivo.html)
+
+---
+
+## Visualizaciones
+
+### Comparación de % de días sobre el límite de la OMS
+![Porcentaje sobre la OMS](images/barras_pct_sobre_oms.png)
+
+### Tendencia de PM2.5 por ciudad
+![Tendencia PM2.5](images/lineas_pm25.png)
+
+---
+
+## Tecnologías utilizadas
+
+- Python (Pandas, Plotly, Folium, Matplotlib)
+- Jupyter Notebook
+- GitHub Pages
+
+---
+
+## Cómo ejecutar localmente
+
+```bash
+git clone https://github.com/yoccegr/aire-iberoamerica-90d.git
+cd aire-iberoamerica-90d
+pip install -r requirements.txt
+jupyter notebook
